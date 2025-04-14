@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/psychology2.png">
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Оккультизм</title>
+</head>
+
+<body>
+
+    <div class="modal-form mfp-hide mfp-with-anim" id="modal-form">
+        <div class="modal-form-head">
+            <div class="modal-form-logo"></div>
+            <div class="modal-form-close">
+                <img src="images/close.svg" alt="Close">
+            </div>
+        </div>
+
+        <div class="modal-form-body">
+            <div class="modal-form-title">Вы успешно записались</div>
+        </div>
+    </div>
+
+    <div class="modal-form mfp-hide mfp-with-anim" id="recharge-modal">
+        <div class="modal-form-head">
+            <div class="modal-form-logo"></div>
+            <div class="modal-form-close">
+                <img src="images/close.svg" alt="Close">
+            </div>
+        </div>
+
+        <div class="modal-form-body">
+            <div class="modal-form-title">Пополнение баланса</div>
+            <form id="recharge-form">
+                <input type="text" id="card-number" placeholder="Номер карты*" required>
+                <select id="amount" required>
+                    <option value="" disabled selected>Сумма пополнения*</option>
+                    <option value="100">100</option>
+                    <option value="500">500</option>
+                    <option value="1000">1000</option>
+                    <option value="2000">2000</option>
+                    <option value="3000">3000</option>
+                </select>
+                <input type="text" id="first-name" placeholder="Имя*" required>
+                <input type="text" id="last-name" placeholder="Фамилия*" required>
+                <button type="submit" class="form-button">Пополнить</button>
+            </form>
+            <div id="recharge-message" style="margin-top: 20px; color: green;"></div>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-row">
+                    <div class="header-decs"></div>
+                    <div class="header-right">
+                        <div class="header-info">
+                            <img src="images/location.svg" alt="ул.Строителей 8/1 кв.206">
+                            <span>ул.Строителей 8/1 кв.206</span>
+                        </div>
+                        <a href="Untitled-1.html">
+                            <span>Выйти</span>
+                        </a>
+
+                        <div class="header-social">
+                            <a href="https://yandex.ru/images/search?from=tabbar&img_url=https%3A%2F%2Fstatic2.jamaran.news%2Fthumbnail%2FcydMY4mK5JaQ%2FkftOZWraiFm9PM1Rxi22rcAakDOsrBGdobLolpyHk2jmWcgdmlXHqbtrCqhu6f3J9_G4aHSPIPjV9yE8zecLkmalQHBWILQW%2F%25D8%25AA%25D9%2588%25D8%25A6%25DB%258C%25D8%25AA%25D8%25B1.jpg&lr=75&pos=0&rpt=simage&text=твиттер">
+                                <img src="images/social-twitter.svg" alt="Twitter">
+                            </a>
+                            <a href="https://vk.com/">
+                                <img src="images/social-vk.svg" alt="Вконтакте">
+                            </a>
+                            <a href="https://yandex.ru/images/search?from=tabbar&img_url=https%3A%2F%2Fsun3-12.userapi.com%2FG6nsMCuxtpm2pTvLQPeBhUbANFJ6WZnZjUbJig%2F1xgSmzRnzHk.jpg&lr= 75&pos=1&rpt=simage&text=facebook">
+                                <img src="images/social-facebook.svg" alt="Facebook">
+                            </a>
+                            <a href="https://telegram.org/">
+                                <img src="images/social-telegram.svg" alt="Telegram">
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-bottom">
+            <div class="container">
+                <div class="header-bottom-row">
+                    <div class="header-logo">
+                        <a href="Untitled-1.html">
+                            
+                        </a>
+                    </div>
+
+                    <nav class="header-nav">
+                        <ul>
+                            <li>
+                                <button class="def-btn" onclick="openRechargeModal()">Пополнить баланс</button>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        
+    </header>
+
+    <div class="s-services">
+        <div class="container">
+            <h2 class="center-title">Бесплатные услуги</h2>
+            <div class="services-row">
+                <div class="services-item">
+                    <div class="services-thumb">
+                        <img src="images/okky20.jpg" alt="БУУУ" width="350">
+                    </div>
+                    <div class="services-body">
+                        <h4 class="services-title">Консультации по проведению магических ритуалов</h4>
+                        <a href="#modal-form" data-effect="mfp-zoom-in" class="def-btn services-btn" onclick="addFreeService('Консультации по проведению магических ритуалов')">Заказать услугу</a>
+                    </div>
+                </div>
+
+                <div class="services-item">
+                    <div class="services-thumb">
+                        <img src="images/okky21.jpg" alt="СЕКАС" width="350">
+                    </div>
+                    <div class="services-body">
+                        <h4 class="services-title">Совместимость партнеров по звездам</h4>
+                        <a href="#modal-form" data-effect="mfp-zoom-in" class="def-btn services-btn" onclick="addFreeService('Совместимость партнеров по звездам')">Заказать услугу</a>
+                    </div>
+                </div>
+                <div class="services-item">
+                    <div class="services-thumb">
+                        <img src="images/okky22.jpg" alt="БУГАБУГА" width="350">
+                    </div>
+                    <div class="services-body">
+                        <h4 class="services-title">Медитации для очищения и защиты энергии</h4>
+                        <a href="#modal-form" data-effect="mfp-zoom-in" class="def-btn services-btn" onclick="addFreeService('Медитации для очищения и защиты энергии')">Заказать услугу</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="s-services">
+        <div class="container">
+            <h2 class="center-title">Покупки</h2>
+            <div class="bonus-info">
+                <h3>Баланс:$ <span id="bonus-amount">5000</span></h3>
+            </div>
+            <div class="services-row">
+                <div class="services-item">
+                    <div class="services-thumb">
+                        <img src="images/okky7.jpg" alt="Псих" width="350">
+                    </div>
+                    <div class="services-body">
+                        <h4 class="services-title">Расклады карт Таро</h4>
+                        <button class="def-btn services-btn" onclick="buyItem('Расклады карт Таро', 5000)">Купить за 5000$</button>
+                    </div>
+                </div>
+
+                <div class="services-item">
+                    <div class="services-thumb">
+                        <img src="images/okky8.jpg" alt="Секас" width="350">
+                    </div>
+                    <div class="services-body">
+                        <h4 class="services-title">магическиe товары (свечи, травы, амулеты).</h4>
+                        <button class="def-btn services-btn" onclick="buyItem('магическиe товары', 500)">Купить за 500$</button>
+                    </div>
+                </div>
+                <div class="services-item">
+                    <div class="services-thumb">
+                        <img src="images/okky9.jpg" alt="Энергия космоса" width="350">
+                    </div>
+                    <div class="services-body">
+                        <h4 class="services-title">Предсказания будущего</h4>
+                        <button class="def-btn services-btn" onclick="buyItem('Предсказания будущего', 10000)">Купить за 10000$</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="s-services">
+        <div class="container">
+            <h2 class="center-title">История</h2>
+            <ul id="cart-items"></ul>
+            <button class="def-btn" onclick="checkout()">Очистить историю</button>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/magnific-popup.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+        let bonusAmount = localStorage.getItem('bonusAmount') ? parseInt(localStorage.getItem('bonusAmount')) : 5000;
+        document.getElementById('bonus-amount').innerText = bonusAmount;
+
+        let cart = [];
+
+        function buyItem(itemName, cost) {
+            if (bonusAmount >= cost) {
+                bonusAmount -= cost;
+                document.getElementById('bonus-amount').innerText = bonusAmount;
+                localStorage.setItem('bonusAmount', bonusAmount);
+                cart.push({ name: itemName, price: cost });
+                updateCart();
+                alert('Товар куплен!');
+            } else {
+                alert('Недостаточно бонусов для покупки!');
+            }
+        }
+
+        function addFreeService(serviceName) {
+            cart.push({ name: serviceName, price: 0 }); // Цена бесплатной услуги 0
+            updateCart();
+            alert('Услуга добавлена в историю!');
+        }
+
+        function updateCart() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            cartItemsContainer.innerHTML = '';
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.name} - $${item.price}`;
+                cartItemsContainer.appendChild(li);
+            });
+        }
+
+        function checkout() {
+            if (cart.length > 0) {
+                alert('История очищена.');
+                cart = [];
+                updateCart();
+            } else {
+                alert('Покупок нет!');
+            }
+        }
+
+        function openRechargeModal() {
+            $.magnificPopup.open({
+                items: {
+                    src: '#recharge-modal'
+                },
+                type: 'inline'
+            });
+        }
+
+        document.getElementById('recharge-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const amount = parseInt(document.getElementById('amount').value);
+            bonusAmount += amount;
+            localStorage.setItem('bonusAmount', bonusAmount);
+            document.getElementById('bonus-amount').innerText = bonusAmount;
+
+            const message = document.getElementById('recharge-message');
+            message.textContent = 'Вы успешно пополнили баланс на ' + amount + '$';
+            message.style.color = 'green';
+            document.getElementById('recharge-form').reset();
+            $.magnificPopup.close();
+        });
+    </script>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <a href="#">
+                            <img src="images/okky11.png" alt="INTERNAL COMPASS">
+                        </a>
+                    </div>
+                    <div class="footer-desc">
+                        <strong>Оккультизм</strong> - Идеальное место для изучения оккультизма и самопознания, где вы сможете провести незабываемое время в мире магии и мистики. Разнообразные занятия, мастер-классы по эзотерике и увлекательные практики помогут развить интуицию и укрепить связи с единомышленниками. Мы создаем атмосферу доверия и вдохновения, где каждый участник раскрывает свои способности и наслаждается увлекательными вечерами в окружении новых друзей и опытных наставников.
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <nav class="footer-nav">
+                        <h5 class="footer-title">Навигатор</h5>
+                        <ul>
+                            <li><a href="">О нас</a></li>
+                            <li><a href="">Соревнования</a></li>
+                            <li><a href="">Фотогалерия</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="footer-nav">
+                        <h5 class="footer-title">График</h5>
+                        <ul>
+                            <li>Понедельник : 8:00 - 17:00</li>
+                            <li>Вторник: 8:00 - 17:00</li>
+                            <li>Среда: 8:00 - 17:00</li>
+                            <li>Четверг: 8:00 - 17:00</li>
+                            <li>Пятница: 8:00 - 17:00</li>
+                            <li>Суббота: 8:00 - 17:00</li>
+                            <li>Воскресенье: 10:00 - 17:00</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-nav">
+                        <h5 class="footer-title">Контакты</h5>
+                        <div class="footer-info-item">
+                            <div class="footer-info-text"> ул.Строителей 8/1 кв.206</div>
+                        </div>
+
+                        <div class="footer-info-item">
+                            <div class="footer-info-text">+7 924 557 3241</div>
+                        </div>
+                    </div>
+
+                    <div class="footer-social">
+                        <a href="https://yandex.ru/images/search?from=tabbar&img_url=https%3A%2F%2Fstatic2.jamaran.news%2Fthumbnail%2FcydMY4mK5JaQ%2FkftOZWraiFm9PM1Rxi22rcAakDOsrBGdobLolpyHk2jmWcgdmlXHqbtrCqhu6f3J9_G4aHSPIPjV9yE8zecLkmalQHBWILQW%2F%25D8%25AA%25D9%2588%25D8%25A6%25DB%258C%25D8%25AA%25D8%25B1.jpg&lr=75&pos=0&rpt=simage&text=твиттер">
+                            <img src="images/social-twitter.svg" alt="Twitter">
+                        </a>
+                        <a href="https://vk.com/">
+                            <img src="images/social-vk.svg" alt="Вконтакте">
+                        </a>
+                        <a href="https://yandex.ru/images/search?from=tabbar&img_url=https%3A%2F%2Fsun3-12.userapi.com%2FG6nsMCuxtpm2pTvLQPeBhUbANFJ6WZnZjUbJig%2F1xgSmzRnzHk.jpg&lr=75&pos=1&rpt=simage&text=facebook">
+                            <img src="images/social-facebook.svg" alt="Facebook">
+                        </a>
+                        <a href="https://telegram.org/">
+                            <img src="images/social-telegram.svg" alt="Telegram">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
